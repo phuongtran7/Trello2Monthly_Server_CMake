@@ -168,7 +168,7 @@ void on_shutdown()
 }
 int main()
 {
-	const string_t address = U("http://localhost:34568");
+	const string_t address = U("http://192.168.72.253:34568");
 	on_initialize(address);
 	std::cout << "Press ENTER to exit." << std::endl;
 
