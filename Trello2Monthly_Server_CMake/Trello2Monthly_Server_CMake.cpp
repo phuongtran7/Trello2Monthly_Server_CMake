@@ -2,6 +2,7 @@
 //
 
 #include "Trello2Monthly_Server_CMake.h"
+
 using namespace web;
 using namespace utility;
 using namespace http;
@@ -158,7 +159,7 @@ void on_initialize(const string_t & address)
 	httpserver = std::make_unique<server>(addr);
 	httpserver->open().get();
 
-	std::wcout << string_t(U("Listening for requests at: ")) << addr << std::endl;
+	//std::cout << string_t(U("Listening for requests at: ")) << addr << std::endl;
 }
 
 void on_shutdown()
