@@ -110,7 +110,7 @@ void server::handle_put(const http_request& message) const
 			fout.close();
 
 			// Convert to PDF
-			std::system((fmt::format(R"(pdflatex "{}")", temp_file_name + ".tex")).c_str());
+			std::system((fmt::format(R"(pdflatex --interaction=batchmode "{}")", temp_file_name + ".tex")).c_str());
 
 			// Convert to word if pandoc is installed
 			std::system((fmt::format(R"(pandoc -s "{}" -o "{}")", temp_file_name + ".tex", temp_file_name + ".docx")).c_str());
